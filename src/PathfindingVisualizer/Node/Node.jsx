@@ -4,14 +4,15 @@ import './Node.css';
 
 export default class Node extends Component {
     render() {
+        console.log(this.props)
         const {
             col,
             isFinish,
             isStart,
             isWall,
-            onMouseDown,
-            onMouseEnter,
-            onMouseUp,
+            // onMouseDown,
+            // onMouseEnter,
+            // onMouseUp,
             row
         } = this.props;
 
@@ -21,9 +22,10 @@ export default class Node extends Component {
             <div
                 id={`node-${row}-${col}`}
                 className={`node ${extraClassName}`}
-                onMouseUp={() => onMouseUp()}
-                onMouseEnter={() => onMouseEnter(row, col)}
-                onMouseDown={() => onMouseDown(row, col)}></div>
+                // onMouseUp={() => onMouseUp()}
+                // onMouseEnter={() => onMouseEnter(row, col)}
+                // onMouseDown={() => onMouseDown(row, col)}
+            ></div>
         );
     }
 
